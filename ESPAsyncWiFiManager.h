@@ -158,12 +158,13 @@ public:
   void          setRemoveDuplicateAPs(boolean removeDuplicates);
 
 private:
+  AsyncWebServer *server;
   #ifdef USE_EADNS
   AsyncDNSServer      *dnsServer;
   #else
   DNSServer      *dnsServer;
   #endif
-  AsyncWebServer *server;
+  
 
 
   boolean         _modeless;
